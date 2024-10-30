@@ -7,14 +7,10 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Comparator;
-import java.util.List;
-import java.util.Objects;
+
 
 import vttp.batch5.sdf.task01.models.BikeEntry;
-import vttp.batch5.sdf.task01.Utilities;
 
 
 // Use this class as the entry point of your program
@@ -48,7 +44,6 @@ public class Main {
         // });
 
 		//printing out the top 5 days with most cyclists
-		Utilities util = new Utilities();
 		for(int i = 0 ; i < 5; i++){
 			// System.out.println(allBikes.get(i).getCasual() + allBikes.get(i).getRegistered());
 			String position;
@@ -81,9 +76,9 @@ public class Main {
 				holiday = "not a holiday";
 			}
 
-			System.out.printf("The %s recorded number of cyclists was in %s, on a %s in the month of %s. \n", position, util.toSeason(allBikes.get(i).getSeason()), util.toWeekday(allBikes.get(i).getWeekday()), util.toMonth(allBikes.get(i).getMonth()) );
+			System.out.printf("The %s recorded number of cyclists was in %s, on a %s in the month of %s. \n", position, Utilities.toSeason(allBikes.get(i).getSeason()), Utilities.toWeekday(allBikes.get(i).getWeekday()), Utilities.toMonth(allBikes.get(i).getMonth()) );
 			System.out.printf("There were a total of %d cyclist. The weather was %s.\n", allBikes.get(i).getCasual()+allBikes.get(i).getRegistered(), weather);
-			System.out.printf("%s was %s.\n", util.toWeekday(allBikes.get(i).getWeekday()), holiday);
+			System.out.printf("%s was %s.\n", Utilities.toWeekday(allBikes.get(i).getWeekday()), holiday);
 			System.out.println("");
 
 		}
