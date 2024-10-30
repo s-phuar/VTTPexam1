@@ -8,7 +8,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-import vttp.batch5.TTTengine;
 
 //NUS\coding\exam1\task02> javac -d classes --source-path src src/vttp/batch5/sdf/task02/*.java
 //NUS\coding\exam1\task02> java -cp classes vttp/batch5/sdf/task02.Main TTT/figure1.txt
